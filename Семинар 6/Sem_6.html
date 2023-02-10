@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Задание 1 -->
+    <!-- <div id="block">
+      <p>1</p>
+      <p>2</p>
+    </div>
+    <p class="www">text 1</p>
+    <p class="www">text 2</p> -->
+
+    <!-- Задание 2 -->
+    <!-- <a class="link" href="#">link text html</a>
+    <img class="photo" src="" alt="" /> -->
+
+    <!-- Задание 3 - 4 -->
+    <div class="content"></div>
+    <script>
+      //Задание 1
+      //   const silka = document.querySelector("div#block p");
+      //   console.log(silka);
+      //   console.log(document.querySelector("p.www"));
+
+      // Задание 2
+      //   const elementLink = document.querySelector("a.link");
+      //   elementLink.textContent = "link text js";
+      //   elementLink.href = "https://developer.mozilla.org/ru/";
+      //   const elementImg = document.querySelector("img.photo");
+      //   elementImg.src =
+      //     "https://hlopotyshki.ru/wp-content/uploads/2022/03/s-dnem-rozh-zhenshine-video.jpg";
+
+      //Задание 3
+      //   const elementPar = document.createElement("p");
+      //   elementPar.textContent = "Новый текстовый элемент";
+      //   const content = document.querySelector("div.content");
+      //   content.appendChild(elementPar);
+      //   elementPar.remove();
+
+      //Задание 4
+      const btn = document.createElement("button");
+      btn.textContent = "Klick";
+      const content = document.querySelector("div.content");
+      content.appendChild(btn);
+      let countBtn = 0;
+      btn.onclick = function () {
+        console.log(++countBtn);
+      };
+    </script>
+  </body>
+</html>
