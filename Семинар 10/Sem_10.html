@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class = "content"></div>
+    <script src="data.js"></script>
+    <script>        
+    //Задание 3
+        // Создать файл index.html
+        // Подключить data.js
+        // Добавить блок <div class="content"></div>
+        // Создать переменную data и добавить в нее JSON parse данные из файла data.js
+        // Вывести в консоль объект data
+        // С помощью foreach обойти массив data
+        // Вывести все изображения из данных
+        const data = JSON.parse(dataInfo);
+        data.forEach(element => {
+            console.log(element.id);
+        });
+        //Задание 4
+// Создать все необходимые заголовки, параграфы изображения (из данных json)
+// Добавить все содержимое в блок контент
+// Добавить стили при необходимости
+
+
+///////////////////////*ДОДЕЛАТЬ*///////////////////////
+
+    </script>
+</body>
+</html>
