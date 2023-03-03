@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="products__cards"></div>
+    <script src="data.js"></script>
+    <script>
+        //Задание 1 
+// Дан макет https://www.figma.com/file/mZwLT9fKktsWuVyfQRoST1/shop-(Copy)-(Copy)?node-id=73%3A140 в котором представлены товары на странице корзины
+// Необходимо создать файл data.js в котором создать переменную dataProducts в которую присвоить JSON данные по товарам.
+// Вам нужно самостоятельно создать JSON данные (не забыть про кавычки для ключей и значений
+// Добавить все данные из макета, чтобы в дальнейшим по ним мы смогли создать вёрстку
+
+//Задание 2
+// Создаём вёрстку по данному макету
+// Добавляем все теги и стили для них, чтобы получилось один в один как в макете
+// Пока данные для шаблонизации использовать не нужно 
+
+//Задание 3
+// Создаём блоки с помощью javascript для этого используем данные из dataProducts
+// Формируем товары на основе нашей вёрстки
+// Проверяем, как будет выглядеть сайт, если в json данных, добавить еще один объект с товаром (в вёрстке должен появиться еще один блок, на основе этих данных)
+////////////////Доделать////////////////
+
+const productsInfo = JSON.parse(dataProducts);
+const productsCards = document.querySelector('.products__cards');
+
+productsInfo.forEach(element => {
+const productCard = document.createElement('div');
+productCard.classList.add('product__card');
+
+const productImg = document.createElement('img');
+productImg.setAttribute('alt', 'product');
+productImg.src = element.img;
+
+const productCardInfo = document.createElement('div');
+productCardInfo.classList.add('product__card__info');
+
+const cardTitle = document.createElement('h3');
+cardTitle.textContent = element.name;
+
+const cardPrice = document.createElement('span');
+cardPrice.textContent = `$${element.price}`;
+const cardColor = document.createElement('p');
+cardColor.textContent = element.color;
+const cardSize = document.createElement('p');
+cardSize.textContent = element.size;
+const cardQuantity = document.createElement('p');
+cardQuantity.textContent = element.quantity;
+
+
+productCardInfo.appendChild(cardTitle);
+productCardInfo.appendChild(cardPrice);
+productCardInfo.appendChild(cardColor);
+productCardInfo.appendChild(cardSize);
+productCardInfo.appendChild(cardQuantity);
+productCard.appendChild(productImg);
+productCard.appendChild(productCardInfo);
+productsCards.appendChild(productCard);
+});
+</script>
+</body>
+</html>

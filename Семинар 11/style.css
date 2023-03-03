@@ -1,0 +1,36 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+body {
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+.products__cards {
+    margin-top: 319px;
+    margin-bottom: 100px;
+    margin-left: 230px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.product__card {
+    width: 652px;
+    height: 306px;
+    display: flex;
+    gap: 31px;
+}
+
+.product__card__info{
+    
+}
